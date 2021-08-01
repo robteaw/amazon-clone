@@ -12,15 +12,24 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+
+    <script src="./firebase.js"></script>
+    <script src="./script.js"></script>
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/ffdae726c5.js" crossorigin="anonymous"></script>
     <!-- Jdenticon -->
     <script src="https://cdn.jsdelivr.net/npm/jdenticon@3.1.0/dist/jdenticon.min.js" async
         integrity="sha384-VngWWnG9GS4jDgsGEUNaoRQtfBGiIKZTiXwm9KpgAeaRn6Y/1tAFiyXqSzqC8Ga/" crossorigin="anonymous">
     </script>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
 
   </head>
   <body>
@@ -174,7 +183,7 @@
                     <h1 class="text-2xl font-bold text-gray-700 mb-5">Hot Deals 🔥</h1>
                     <div class="main-section-products flex">
                         <div class="main-product ml-6">
-                            <div class="product-image h-52 w-48 bg-white rounded-lg">
+                            <!-- <div class="product-image h-52 w-48 bg-white rounded-lg">
                                 <img class="h-full w-full object-contain p-4" src="https://m.media-amazon.com/images/I/61-PblYntsL._AC_SL1500_.jpg">
                             </div>
                             <div class="product-name text-grey-700 font-bold mt-2 text-sm">
@@ -189,72 +198,9 @@
                             <div class="product-price font-bold text-grey-700 text-lg">
                                 $290.00
                             </div>
-                            <div class="product-button w-28 mt-5 p-2 flex items-center justify-center bg-yellow-500 justify-center rounded text-white cursor-pointer hover:bg-yellow-600">
+                            <div class="product-button h-8 w-28 mt-5 p-2 text-md flex items-center justify-center bg-yellow-500 justify-center rounded text-white cursor-pointer hover:bg-yellow-600">
                                 Add to Cart
-                            </div>
-                        </div>
-
-                        <div class="main-product ml-6">
-                            <div class="product-image h-52 w-48 bg-white rounded-lg">
-                                <img class="h-full w-full object-contain p-4" src="https://m.media-amazon.com/images/I/71vFKBpKakL._AC_SL1500_.jpg">
-                            </div>
-                            <div class="product-name text-grey-700 font-bold mt-2 text-sm">
-                                Macbook Air (2020)
-                            </div>
-                            <div class="product-make text-green-700 font-bold">
-                                Apple
-                            </div>
-                            <div class="product-rating text-yellow-500 font-bold my-1">
-                                ⭐⭐⭐⭐⭐ 4.5
-                            </div>
-                            <div class="product-price font-bold text-grey-700 text-lg">
-                                $750.00
-                            </div>
-                            <div class="product-button w-28 mt-5 p-2 flex items-center justify-center bg-yellow-500 justify-center rounded text-white cursor-pointer hover:bg-yellow-600">
-                                Add to Cart
-                            </div>
-                        </div>
-
-                        <div class="main-product ml-6">
-                            <div class="product-image h-52 w-48 bg-white rounded-lg">
-                                <img class="h-full w-full object-contain p-4" src="https://m.media-amazon.com/images/I/712aMfpiMlL._AC_SX466_.jpg">
-                            </div>
-                            <div class="product-name text-grey-700 font-bold mt-2 text-sm">
-                                Roborock S6 Vacuum (2019)
-                            </div>
-                            <div class="product-make text-green-700 font-bold">
-                                Roborock
-                            </div>
-                            <div class="product-rating text-yellow-500 font-bold my-1">
-                                ⭐⭐⭐⭐⭐ 4.5
-                            </div>
-                            <div class="product-price font-bold text-grey-700 text-lg">
-                                $380.00
-                            </div>
-                            <div class="product-button w-28 mt-5 p-2 flex items-center justify-center bg-yellow-500 justify-center rounded text-white cursor-pointer hover:bg-yellow-600">
-                                Add to Cart
-                            </div>
-                        </div>
-
-                        <div class="main-product ml-6">
-                            <div class="product-image h-52 w-48 bg-white rounded-lg">
-                                <img class="h-full w-full object-contain p-4" src="https://m.media-amazon.com/images/I/51+71owI1TL._SY355_.jpg">
-                            </div>
-                            <div class="product-name text-grey-700 font-bold mt-2 text-sm">
-                                Ring Spotlight Cam (2019)
-                            </div>
-                            <div class="product-make text-green-700 font-bold">
-                                Ring
-                            </div>
-                            <div class="product-rating text-yellow-500 font-bold my-1">
-                                ⭐⭐⭐⭐⭐ 4.5
-                            </div>
-                            <div class="product-price font-bold text-grey-700 text-lg">
-                                $240.00
-                            </div>
-                            <div class="product-button w-28 mt-5 p-2 flex items-center justify-center bg-yellow-500 justify-center rounded text-white cursor-pointer hover:bg-yellow-600">
-                                Add to Cart
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
