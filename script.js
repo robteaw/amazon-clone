@@ -57,7 +57,7 @@ function generateItems(items) {
     ⭐⭐⭐⭐⭐ ${item.rating}
     </div>
     <div class="product-price font-bold text-grey-700 text-lg">
-        ${item.price}
+        ${numeral(item.price).format("$0,0.00")}
     </div>
     `;
 

@@ -11,21 +11,38 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+    <script src="./firebase.js"></script>
+
+    <script src="./header.js"></script>
+    <script src="./cart.js"></script>  
+    <!-- NumeralJs -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/ffdae726c5.js" crossorigin="anonymous"></script>
     <!-- Jdenticon -->
     <script src="https://cdn.jsdelivr.net/npm/jdenticon@3.1.0/dist/jdenticon.min.js" async
         integrity="sha384-VngWWnG9GS4jDgsGEUNaoRQtfBGiIKZTiXwm9KpgAeaRn6Y/1tAFiyXqSzqC8Ga/" crossorigin="anonymous">
     </script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="bg-white w-full">
         <div class="header h-16 bg-gray-900 flex items-center">
             <div class="logo w-1/5 h-16 ml-10">
+                <a href="./index.html">
                 <img class="w-28 h-16 object-contain" src="logo.png">
                 <!-- object-contain = object-fit -->
+            </a>
             </div>
             <input class="h-9 w-30 bg-gray-800 border border-gray-500 border-opacity-75 rounded-l-xl px-3 text-white ml-6 focus:outline-none placeholder-white" id="search" type="text" placeholder="Search...">
             <div class="categories h-9 w-30 bg-gray-800 border border-gray-500 border-opacity-75 px-3 text-white flex items-center">
@@ -60,7 +77,7 @@
 
         <div class="main h-screen flex">
             <!-- flex shows the sidebar -->
-            <div class="main-sidebar w-1/5 bg-gray-900 border-t-2 border-gray-700 p-6">
+            <div class="main-sidebar hidden md:block w-1/5 bg-gray-900 border-t-2 border-gray-700 p-6">
                 <div class="sidebar-categories">
                     <div class="sidebar-main-category text-yellow-500 cursor-pointer flex font-bold p-2 bg-gray-700 rounded-lg">
                         <span class="w-8">
@@ -117,62 +134,7 @@
                     <span class="w-10"></span>
                 </div>
                 <div class="cart-items mt-5">
-                    <div class="cart-item flex items-center pb-4 border-b border-gray-100">
-                        <div class="cart-item-image h-24 w-40 bg-white p-4 rounded-lg">
-                            <img class="h-full w-full object-contain" src="https://m.media-amazon.com/images/I/61-PblYntsL._AC_SL1500_.jpg" >
-                        </div>
-                        <div class="cart-item-details flex-grow">
-                            <div class="cart-item-title font-bold text-sm text-gray-600">
-                                Nintendo Switch
-                            </div>
-                            <div class="cart-item-brand text-sm text-gray-400">
-                                Nintendo
-                            </div>
-                        </div>
-                        <div class="cart-item-counter w-48 flex items-center">
-                            <div class="chevron-left cursor-pointer text-gray-400 bg-gray-100 rounded h-6 w-6 flex justify-center items-center hover:bg-gray-200 mr-2">
-                                <i class="fas fa-chevron-left fa-xs"></i>
-                            </div>
-                            <h4 class="text-gray-400">x1</h4>
-                            <div class="chevron-right cursor-pointer text-gray-400 bg-gray-100 rounded h-6 w-6 flex justify-center items-center hover:bg-gray-200 ml-2">
-                                <i class="fas fa-chevron-right fa-xs"></i>
-                            </div>
-                        </div>
-                        <div class="cart-item-total-cost w-48 font-bold text-gray-400">
-                            $290.00
-                        </div>
-                        <div class="cart-item-delete w-10 font-bold text-gray-300 cursor-pointer hover:text-gray-400">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </div>
-
-                    <div class="cart-item flex items-center pb-4 border-b border-gray-100">
-                        <div class="cart-item-image h-24 w-40 bg-white p-4 rounded-lg">
-                            <img class="h-full w-full object-contain" src="https://m.media-amazon.com/images/I/51+71owI1TL._SY355_.jpg" >
-                        </div>
-                        <div class="cart-item-details flex-grow">
-                            <div class="cart-item-title font-bold text-sm text-gray-600">
-                                Ring Spotlight Cam
-                            </div>
-                            <div class="cart-item-brand text-sm text-gray-400">
-                                Ring
-                            </div>
-                        </div>
-                        <div class="cart-item-counter w-48 flex items-center">
-                            <div class="chevron-left cursor-pointer text-gray-400 bg-gray-100 rounded h-6 w-6 flex justify-center items-center hover:bg-gray-200 mr-2">
-                                <i class="fas fa-chevron-left fa-xs"></i>
-                            </div>
-                            <h4 class="text-gray-400">x1</h4>
-                            <div class="chevron-right cursor-pointer text-gray-400 bg-gray-100 rounded h-6 w-6 flex justify-center items-center hover:bg-gray-200 ml-2">
-                                <i class="fas fa-chevron-right fa-xs"></i>
-                            </div>
-                        </div>
-                        <div class="cart-item-total-cost w-48 font-bold text-gray-400">
-                            $240.00
-                        </div>
-                        <div class="cart-item-delete w-10 font-bold text-gray-300 cursor-pointer hover:text-gray-400">
-                            <i class="fas fa-times"></i>
-                        </div>
+                        <!-- Cart Items from DB -->
                     </div>
                     <div class="complete-order flex justify-end mt-10">
                         <div class="total-cost mr-7">
